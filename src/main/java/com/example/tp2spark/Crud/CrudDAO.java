@@ -63,7 +63,7 @@ public abstract class CrudDAO<T> {
             con.createQuery(insertSQL).bind(t).executeUpdate();
             System.out.println("Entidad insertada" + t);
         } catch (Exception e) {
-            System.err.println("Error al ejecutar la query: " + e.getMessage());
+            System.err.println("Error en la query: " + e.getMessage());
             throw e; // Lanza el error para que el controlador lo maneje
         }
     }
